@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Assessments</title>
+
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+
+</head>
+<body>
+
+
+
+  <figure>
+    <img id="user-image" src="https://images.unsplash.com/photo-1513366208864-87536b8bd7b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="">
+    <figcaption id="display-message"> </figcaption>
+
+    <form id="form" action="index.html" method="post">
+      <input type="file" id="file-upload"><br>
+      <input type="text" id="input-message"><br>
+      <input type="radio" name="gender" value="male"> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other<br>
+      <button type="submit" name="button">Submit</button>
+    </form>
+
+    <script>
+      const fileUpload = document.getElementById('file-upload')
+      const userImage = document.getElementById('user-image')
+      const displayMessage = document.getElementById('display-message')
+      const inputMessage = document.getElementById('input-message')
+      const form = document.getElementById('form')
+
+      form.onsubmit = function(e) {
+        e.preventDefault()
+      }
+
+      inputMessage.oninput = function(e) {
+        console.log(e.target.value)
+        displayMessage.innerHTML = e.target.value
+      }
+
+      fileUpload.onchange = function(e) {
+        console.log(e.target.files)
+        const fr = new FileReader()
+        fr.onload = function(e) {
+          userImage.src = e.target.result
+        }
+        fr.readAsDataURL(e.target.files[0])
+      }
+    </script>
+
+  </figure>
+
+
+  <style media="screen">
+    #user-image {
+      width: 300px:
+      height: auto:
+    }
+  </style>
+
+</body>
+</html>
