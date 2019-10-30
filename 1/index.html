@@ -14,18 +14,18 @@
 </head>
 <body>
 
-
-
   <figure>
     <img id="user-image" src="https://images.unsplash.com/photo-1513366208864-87536b8bd7b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="">
     <figcaption id="display-message"> </figcaption>
 
     <form id="form" action="index.html" method="post">
       <input type="file" id="file-upload"><br>
-      <input type="text" id="input-message"><br>
-      <input type="radio" name="gender" value="male"> Male<br>
-      <input type="radio" name="gender" value="female"> Female<br>
-      <input type="radio" name="gender" value="other"> Other<br>
+      <label><input type="text" id="input-message"></label><br>
+      <span for=""><strong>T-shirt Size </strong><br>
+        <label><input type="radio" name="gender" value="male"> <i>Male</i></label><br>
+        <label><input type="radio" name="gender" value="female"> <i>Female</i></label><br>
+        <label><input type="radio" name="gender" value="other"> <i>Other</i></label><br>
+      </span>
       <button type="submit" name="button">Submit</button>
     </form>
 
@@ -56,14 +56,6 @@
     </script>
 
   </figure>
-
-
-  <style media="screen">
-    #user-image {
-      width: 300px:
-      height: auto:
-    }
-  </style>
 
 </body>
 </html>
